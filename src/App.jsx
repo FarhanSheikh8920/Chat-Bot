@@ -7,7 +7,7 @@ import chalk from 'chalk'
 import { Col, Container, Row } from 'react-bootstrap'
 function App() {
   const log = console.log;
-  const [answer, setannwer] = useState("")
+  const [answer, setannwer] = useState("ask question")
   const [question, setquestion] = useState("")
   async function Generate() {
     setannwer("It will take time upto 10s")
@@ -22,13 +22,14 @@ function App() {
     })
     setannwer(respons["data"]["candidates"][0]["content"]["parts"][0]["text"]);
   }
-
+ 
 
 
   return (
     <Container className="mt-5">
       <Row className="justify-content-center">
         <Col xs={12} md={8}>
+      
            <h1 className='animated-heading text-center'>Chat Bot</h1><br />
           <div className='"embed-responsive embed-responsive-16by9'>
 
@@ -36,6 +37,7 @@ function App() {
             <textarea className="text.arrea" value={question} onChange={(e) => setquestion(e.target.value)}></textarea><br />
             <button onClick={Generate}>Generate answer</button>
           </div>
+      
           </ Col >
           </ Row >
           </Container >
