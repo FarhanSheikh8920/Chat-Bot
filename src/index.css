@@ -81,6 +81,7 @@ button:focus-visible {
 /* Apply the animation to the h1 tag */
 .animated-heading {
   animation: fadeIn 5s ease-out;
+  color: black;
 }
 textarea {
   resize: none;
@@ -94,9 +95,7 @@ textarea {
     padding: 10px; /* Adds some padding inside the border */
     background-color:#242424 /* Optional: Sets a light grey background color */
   }
-  body{
-    background-color:aliceblue;
-  }
+ 
   textarea {
     width: 400px;
     height: 15px;
